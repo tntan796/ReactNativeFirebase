@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import {Text, View, Button} from 'react-native';
 import database from '@react-native-firebase/database';
-
+import LoginComponent from './components/LoginComponent';
 class App extends Component {
     constructor (props) {
         super(props);
@@ -59,6 +59,7 @@ class App extends Component {
     render() {
         return (
             <View>
+                <LoginComponent></LoginComponent>
                 <Text>Danh sach users</Text>
                 {this.state.users && this.state.users.map((item, index) => <View>
                         <Text>{item.name}</Text>
